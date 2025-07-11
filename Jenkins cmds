@@ -1,0 +1,44 @@
+📜 Common Jenkins CLI Commands
+
+| Command                  | Description                                 |
+| ------------------------ | ------------------------------------------- |
+| `list-jobs`              | Lists all jobs in Jenkins                   |
+| `build <job-name>`       | Triggers a build for the specified job      |
+| `console <job-name>`     | Displays console output of the latest build |
+| `get-job <job-name>`     | Downloads job configuration (XML)           |
+| `update-job <job-name>`  | Updates job config from XML input           |
+| `create-job <job-name>`  | Creates a job using an XML config           |
+| `delete-job <job-name>`  | Deletes a job                               |
+| `disable-job <job-name>` | Disables a job                              |
+| `enable-job <job-name>`  | Enables a disabled job                      |
+| `who-am-i`               | Shows authenticated user                    |
+| `version`                | Displays Jenkins version                    |
+///////////////////////////////////////////////////////////////////////////////
+
+Shell commands for jenkins service:
+
+# Start Jenkins
+sudo systemctl start jenkins
+
+# Stop Jenkins
+sudo systemctl stop jenkins
+
+# Restart Jenkins
+sudo systemctl restart jenkins
+
+# Check Jenkins status
+sudo systemctl status jenkins
+
+/////////////////////////////////////////////////////////////////////////////
+
+Before running CLI commands, download the Jenkins CLI jar:
+
+wget http://your-jenkins-url/jnlpJars/jenkins-cli.jar
+
+🟢 Basic CLI Usage:
+java -jar jenkins-cli.jar -s http://your-jenkins-url/ command [options]
+
+
+
+
+

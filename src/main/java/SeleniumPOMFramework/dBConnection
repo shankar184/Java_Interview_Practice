@@ -1,0 +1,40 @@
+package SeleniumPOMFramework;
+
+public class dBConnection {
+
+        public static void main(String[] args){
+
+            WebDriver driver = new ChromeDriver();
+            driver.get("url");
+            String firstNameInput = "abc";
+            String lastNameInput = "xyz";
+            driver.findElement(By.id("some id")).sendKeys(firstName);
+            driver.findElement(By.id("some id")).sendKeys(lastName);
+            driver.findElement(By.id("some id")).click();
+            Strig dBUrl= "jdbc:mysql://localhost:3306/your_database"";
+            String userName= "dada"
+            String password= "saddsad";
+            Connection conn= DriverManager.getConnection(dBUrl,userName,password);
+            String querry= SELECT first_name,last_name FROM users WHERE email="xyz@gmail.com";
+            String stmt = conn.createStatement();
+            String rs=stmt.executeQuerry(querry);
+            if(rs.nect()){
+                String dbFirstName=rs.getString("first_name");
+                String dbLastName= rs.getString("last_name");
+                if(firstNameInput.equals(dbFirstName&&lastNameInput.equals(dbLastName))){
+                    System.out.println("Both are same")
+                }else{
+                    System.out.println("there is a mismatch")
+                }
+                rs.close();
+                stmt.close();
+                conn.close();
+                driver.close();
+            }
+
+
+
+
+        }
+    }
+

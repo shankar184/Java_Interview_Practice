@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="FullSuiteExample" parallel="tests" thread-count="3">
+
+    <!-- Suite-level parameters -->
+    <parameter name="browser" value="chrome" />
+    <parameter name="environment" value="QA" />
+
+    <!-- Listeners -->
+    <listeners>
+        <listener class-name="listeners.TestListener" />
+    </listeners>
+
+    <!-- Test 1 -->
+    <test name="LoginTests">
+        <parameter name="browser" value="firefox" />
+
+        <groups>
+            <run>
+                <include name="sanity" />
+                <exclude name="regression" />
+            </run>
+        </groups>
+
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="validLoginTest" />
+                    <exclude name="invalidLoginTest" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Test 2 -->
+    <test name="DashboardTests">
+        <groups>
+            <run>
+                <include name="regression" />
+            </run>
+        </groups>
+
+        <packages>
+            <package name="tests.dashboard">
+                <classes>
+                    <class name="tests.dashboard.ProfileTest" />
+                    <class name="tests.dashboard.SettingsTest" />
+                </classes>
+            </package>
+        </packages>
+    </test>
+
+    <!-- Test 3: Parallel Test Example -->
+    <test name="ParallelTestExecution" parallel="classes" thread-count="3">
+        <classes>
+            <class name="tests.ParallelTestExample" />
+        </classes>
+    </test>
+
+    <!-- Test 4: DataProvider Example -->
+    <test name="DataProviderTests">
+        <classes>
+            <class name="tests.DataProviderExample" />
+        </classes>
+    </test>
+
+    <!-- Test 5: Skip Test Example -->
+    <test name="SkipTestExampleTests">
+        <classes>
+            <class name="tests.SkipTestExample" />
+        </classes>
+    </test>
+
+</suite>

@@ -1,19 +1,29 @@
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Dummy {
     public static void main(String[] args) {
-        String[] s = {"000","123","344","000","8799"};
-        HashMap<String,Integer> map = new HashMap<>();
-        for (String str: s){
-            map.put(str,map.getOrDefault(str,0)+1);
-        }
-        System.out.println("The Enteries are:");
-        for (String keys: map.keySet()){
-            if (map.get(keys)>1){
-                System.out.print(keys + "-->" + map.get(keys));
-            }
-        }
 
+            int[] input = {1,2,3,4,5};
+            System.out.println("Before reversing :" + Arrays.toString(input));
+            reverseArray(input);
+            System.out.println("After Reversing :" + Arrays.toString(input));
 
     }
-}
+            public static void reverseArray(int[] input){
+                int start = 0;
+                int end = input.length-1;
+
+                    int temp = input[start];
+                    input[start] = input[end];
+                    input[end] = temp;
+
+
+
+            }
+
+        }
+
+
+
+

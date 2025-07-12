@@ -21,6 +21,6 @@ public class UpperToLowerAndViceVersa {
 
         // Output the result
         System.out.println("Original: " + input);
-        System.out.println("Swapped:  " + result.toString());
+        System.out.println("Swapped:  " + result);
     }
 }

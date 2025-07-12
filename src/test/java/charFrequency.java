@@ -22,6 +22,7 @@ public class charFrequency {
         // Step 5: Print character frequencies
         System.out.println("Character frequencies:");
         for (char ch : freqMap.keySet()) {
+
             System.out.println(ch + " : " + freqMap.get(ch));
         }
     }

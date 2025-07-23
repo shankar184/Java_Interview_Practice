@@ -10,3 +10,4 @@ public class StringToIntegerConversion {
     }
 
 }
+//  character to string....> String str = String.valueOf(char c)

@@ -1,0 +1,25 @@
+// Step 1: Define a custom exception
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
+// Step 2: Use it in a method
+public class CustomExceptionDemo {
+    public static void checkAge(int age) throws InvalidAgeException {
+        if (age < 18) {
+            throw new InvalidAgeException("Age must be at least 18.");
+        } else {
+            System.out.println("Access granted.");
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            checkAge(16);
+        } catch (InvalidAgeException e) {
+            System.out.println("Caught Custom Exception: " + e.getMessage());
+        }
+    }
+}

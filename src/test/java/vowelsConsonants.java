@@ -1,6 +1,6 @@
 public class vowelsConsonants {
     public static void main(String[] args){
-        String input = "ssssssasssss";
+        String input = "aeiouaeiou";
         input =  input.toLowerCase();
         int vowel = 0;
         int consonant = 0;

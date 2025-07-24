@@ -29,7 +29,7 @@ public class ReverseWithSpecialChars {
         }
 
         // Step 9: Convert back to string and print result
-        String result = new String(chars);
-        System.out.println("Reversed without special chars: " + result);
+//        String result = new String(chars);
+        System.out.println("Reversed without special chars: " + new  String(chars));
     }
 }

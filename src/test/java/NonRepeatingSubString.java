@@ -4,7 +4,9 @@ public class NonRepeatingSubString {
         String longest = "";
         String current = "";
 
-        for (char c : input.toCharArray()) {
+
+        for (int i=0;i<input.length();i++) {
+            char c = input.charAt(i);
             String ch = String.valueOf(c);
 
             // If character already exists in current substring

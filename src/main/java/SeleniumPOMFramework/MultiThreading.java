@@ -1,6 +1,6 @@
 package SeleniumPOMFramework;
 
-public class MultiThreading {
+public class MultiThreading extends Thread {
 
     public void run() {
         WebDriver driver = new ChromeDriver();

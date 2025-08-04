@@ -1,0 +1,19 @@
+<hr></hr> Interview Answer: Multi-Threading and Cross-Browser Testing in Selenium
+
+In my Selenium framework,
+ I have implemented multi-threading using TestNG’s parallel execution feature combined with the
+ ThreadLocal WebDriver design pattern.
+This ensures that each test runs in its own isolated thread with a separate WebDriver instance,
+avoiding session conflicts when multiple tests execute simultaneously.
+
+For cross-browser testing, I have:
+
+
+Parameterized the browser type in testng.xml.
+Implemented a WebDriver factory that dynamically initializes Chrome,
+ Firefox, or Edge based on the parameter passed.
+Set up Selenium Grid to distribute tests across multiple machines and
+browsers in parallel.
+This approach allows us to achieve true parallel execution across
+different browsers, significantly reducing test execution time while ensuring
+broader compatibility coverage.

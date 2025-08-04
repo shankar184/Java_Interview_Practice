@@ -17,3 +17,13 @@ browsers in parallel.
 This approach allows us to achieve true parallel execution across
 different browsers, significantly reducing test execution time while ensuring
 broader compatibility coverage.
+
+✅ Key Points Covered in the Answer:
+
+Mentions ThreadLocal + Parallel Execution → shows you understand thread safety.
+
+Mentions Parameterization & WebDriver Factory → highlights framework design knowledge.
+
+Mentions Selenium Grid → demonstrates scalability.
+
+Sounds confident and practical, as interviewers prefer real implementation details.
